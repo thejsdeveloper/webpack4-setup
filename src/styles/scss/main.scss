@@ -1,0 +1,19 @@
+body {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   background-color: hsl(214, 64%, 98%);
+
+    h1 {
+        font-weight: 500;
+        color: #4a4a4a
+    }
+   
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
