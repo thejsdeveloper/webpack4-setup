@@ -1,19 +1,30 @@
-body {
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   background-color: hsl(214, 64%, 98%);
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-    h1 {
-        font-weight: 500;
-        color: #4a4a4a
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f9fd;
+}
+
+
+header {
+    color: #fff;
+    height: 70px;
+
+    .logo {
+        width: 40px;
+        height: 40px;
     }
-   
+}
+
+footer {
+    height: 50px;
 }
 
 main {
     display: flex;
-    align-items: center;
     flex: 1;
+    align-items: center;
     justify-content: center;
 }
