@@ -11,6 +11,7 @@ body {
 header {
     color: #fff;
     height: 70px;
+    user-select: none;
 
     .logo {
         width: 40px;
