@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack --mode development",
     "build:prod": "cross-env NODE_ENV=production webpack --mode production",
-    "dev": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development",
     "typecheck": "tsc"
   },
   "author": "Vikas yadav",
