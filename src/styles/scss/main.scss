@@ -123,9 +123,20 @@ header div img {
 
 .prize-text {
 	font-size: 2em;
+	text-align: center;
 	span {
-		font-size: 5em;
+		font-size: 7em;
 		font-weight: bold;
-		
+		line-height: 1em;
 	}
 }
+
+.team-images {
+	display: grid;
+	grid-gap: 5px;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(auto-fill, 150px);
+	img {
+		width: 150px;
+	}
+} 
