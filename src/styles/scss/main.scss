@@ -10,6 +10,12 @@ body {
 	font-family: "Open Sans";
 	color: #404040;
 	font-weight: 300;
+	p {
+		line-height: 2em;
+	}
+	section, .heading-container, .intro {
+		margin: 40px 0;
+	}
 }
 
 
@@ -19,6 +25,12 @@ header {
 	user-select: none;
 	nav {
 		box-shadow: none;
+	}
+	div img {
+		position: absolute;
+		right: 0;
+		z-index: 9999;
+		width: 250px;
 	}
 }
 
@@ -43,7 +55,7 @@ h1 {
 
 .outline-main {
 	position: absolute;
-	top: 106px;
+	top: 100px;
 	z-index: 9999;
 	font-size: 2em;
 	font-weight: bold;
@@ -91,17 +103,12 @@ h1 {
 
 .heading-container {
 	position: relative;
-	overflow: visible;
 }
 
-header div img {
-	position: absolute;
-	right: 0;
-	z-index: 9999;
-	width: 250px;
-}
+
 
 .heading-text p, .heading-text h1 {
+	line-height: 1.5em;
 	margin-top: -5px;
 	margin-bottom: -5px;
 }
@@ -116,7 +123,7 @@ header div img {
 	display: table;
   }
 
-  svg {
+svg {
 	  fill: white;
 	  margin: 5px;
   }
@@ -128,6 +135,12 @@ header div img {
 		font-size: 7em;
 		font-weight: bold;
 		line-height: 1em;
+		color: #fff;
+		text-shadow:
+			-1px -1px 0 #000,  
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000
 	}
 }
 
