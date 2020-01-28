@@ -22,6 +22,10 @@ header {
 	}
 }
 
+section:nth-child(even) {
+	background-color: $primary-color;
+}
+
 footer {
 	height: 50px;
 }
@@ -39,9 +43,9 @@ h1 {
 
 .outline-main {
 	position: absolute;
-	top: 90px;
+	top: 106px;
 	z-index: 9999;
-	font-size: 1.75em;
+	font-size: 2em;
 	font-weight: bold;
 	color: $primary-color;
 	text-transform: none;
@@ -53,7 +57,7 @@ h1 {
 }
 
 .outline-second {
-	font-size: 1.75em;
+	font-size: 2em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -64,7 +68,7 @@ h1 {
 }
 
 .outline-third {
-	font-size: 1.75em;
+	font-size: 2em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -75,7 +79,7 @@ h1 {
 }
 
 .outline-fourth {
-	font-size: 1.75em;
+	font-size: 2em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
