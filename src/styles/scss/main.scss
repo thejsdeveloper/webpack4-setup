@@ -37,8 +37,10 @@ h1 {
 }
 
 .outline-main {
+	position: absolute;
+	top: 47%;
 	z-index: 9999;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	color: $primary-color;
 	text-transform: none;
@@ -50,7 +52,7 @@ h1 {
 }
 
 .outline-second {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -61,7 +63,7 @@ h1 {
 }
 
 .outline-third {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -72,7 +74,7 @@ h1 {
 }
 
 .outline-fourth {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -82,12 +84,29 @@ h1 {
 	 	1px 1px 0 rgba(255, 255, 255, 0.25)
 }
 
-header img {
-	width: 50%;
-	
+.heading-container {
+	position: relative;
+}
+
+header div img {
+	position: absolute;
+	right: 0;
+	z-index: 9999;
+	width: 60%;
 }
 
 header div p, header div h1 {
-	margin-top: -10px;
-	margin-bottom: -10px;
+	margin-top: -5px;
+	margin-bottom: -5px;
 }
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+  .clearfix {
+	overflow: auto;
+  }
+
