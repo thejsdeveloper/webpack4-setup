@@ -1,5 +1,6 @@
 @import '../../../node_modules/materialize-css/sass/components/_color-variables.scss';
 $primary-color: #00c895;
+$accent-color:  #F37021;
 @import '../../../node_modules/materialize-css/sass/materialize.scss';
 
 body {
@@ -14,7 +15,6 @@ body {
 
 header {
 	background-color: #00c895;
-	height: 70px;
 	user-select: none;
 	nav {
 		box-shadow: none;
@@ -34,4 +34,60 @@ h1 {
 	font-weight: 700;
 	font-size: 30px;
 	color: rgba(0, 0, 0, 0.75);
+}
+
+.outline-main {
+	z-index: 9999;
+	font-size: 2em;
+	font-weight: bold;
+	color: $primary-color;
+	text-transform: none;
+    text-shadow:
+       -1px -1px 0 $accent-color,  
+        1px -1px 0 $accent-color,
+        -1px 1px 0 $accent-color,
+         1px 1px 0 $accent-color
+}
+
+.outline-second {
+	font-size: 2em;
+	font-weight: bold;
+    color: $primary-color;
+    text-shadow:
+       -1px -1px 0 rgba(255, 255, 255, 0.75),  
+        1px -1px 0 rgba(255, 255, 255, 0.75),
+        -1px 1px 0 rgba(255, 255, 255, 0.75),
+         1px 1px 0 rgba(255, 255, 255, 0.75)
+}
+
+.outline-third {
+	font-size: 2em;
+	font-weight: bold;
+    color: $primary-color;
+    text-shadow:
+		-1px -1px 0 rgba(255, 255, 255, 0.5),  
+		1px -1px 0 rgba(255, 255, 255, 0.5),
+		-1px 1px 0 rgba(255, 255, 255, 0.5),
+	 	1px 1px 0 rgba(255, 255, 255, 0.5)
+}
+
+.outline-fourth {
+	font-size: 2em;
+	font-weight: bold;
+    color: $primary-color;
+    text-shadow:
+		-1px -1px 0 rgba(255, 255, 255, 0.25),  
+		1px -1px 0 rgba(255, 255, 255, 0.25),
+		-1px 1px 0 rgba(255, 255, 255, 0.25),
+	 	1px 1px 0 rgba(255, 255, 255, 0.25)
+}
+
+header img {
+	width: 50%;
+	
+}
+
+header div p, header div h1 {
+	margin-top: -10px;
+	margin-bottom: -10px;
 }
