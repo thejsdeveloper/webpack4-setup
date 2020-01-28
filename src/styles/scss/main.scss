@@ -6,6 +6,9 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-family: "Open Sans";
+	color: #404040;
+	font-weight: 300;
 }
 
 
@@ -24,4 +27,11 @@ footer {
 
 main {
 	flex: 1;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.75);
 }
