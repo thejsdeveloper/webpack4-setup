@@ -98,7 +98,7 @@ header div img {
 	position: absolute;
 	right: 0;
 	z-index: 9999;
-	width: 225px;
+	width: 250px;
 }
 
 .heading-text p, .heading-text h1 {
@@ -121,4 +121,11 @@ header div img {
 	  margin: 5px;
   }
 
-
+.prize-text {
+	font-size: 2em;
+	span {
+		font-size: 5em;
+		font-weight: bold;
+		
+	}
+}
