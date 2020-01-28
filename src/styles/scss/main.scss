@@ -39,7 +39,7 @@ h1 {
 
 .outline-main {
 	position: absolute;
-	top: 95px;
+	top: 90px;
 	z-index: 9999;
 	font-size: 1.75em;
 	font-weight: bold;
@@ -97,7 +97,7 @@ header div img {
 	width: 225px;
 }
 
-header div p, header div h1 {
+.heading-text p, .heading-text h1 {
 	margin-top: -5px;
 	margin-bottom: -5px;
 }
