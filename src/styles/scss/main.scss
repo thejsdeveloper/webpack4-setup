@@ -15,6 +15,7 @@ body {
 
 header {
 	background-color: #00c895;
+	color: white;
 	user-select: none;
 	nav {
 		box-shadow: none;
@@ -38,9 +39,9 @@ h1 {
 
 .outline-main {
 	position: absolute;
-	top: 47%;
+	top: 95px;
 	z-index: 9999;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: bold;
 	color: $primary-color;
 	text-transform: none;
@@ -52,7 +53,7 @@ h1 {
 }
 
 .outline-second {
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -63,7 +64,7 @@ h1 {
 }
 
 .outline-third {
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -74,7 +75,7 @@ h1 {
 }
 
 .outline-fourth {
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: bold;
     color: $primary-color;
     text-shadow:
@@ -86,18 +87,23 @@ h1 {
 
 .heading-container {
 	position: relative;
+	overflow: visible;
 }
 
 header div img {
 	position: absolute;
 	right: 0;
 	z-index: 9999;
-	width: 60%;
+	width: 225px;
 }
 
 header div p, header div h1 {
 	margin-top: -5px;
 	margin-bottom: -5px;
+}
+
+.intro {
+	margin-top: 25px;
 }
 
 .clearfix::after {
@@ -106,7 +112,9 @@ header div p, header div h1 {
 	display: table;
   }
 
-  .clearfix {
-	overflow: auto;
+  svg {
+	  fill: white;
+	  margin: 5px;
   }
+
 
