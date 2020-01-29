@@ -114,12 +114,15 @@ h1 {
 	top: 80px;
 	z-index: 9999;
 	font-size: 2.6em;
+	stroke-width: 3;
+	font-weight: 800;
 }
 
 .outline-second, .placeholder, .outline-third, .outline-fourth {
 	font-size: 2.5em;
-	font-weight: bold;
+	font-weight: 800;
 	margin: -55px 0;
+	stroke-width: 1.5;
 }
 
 .heading-container {
@@ -130,11 +133,6 @@ h1 {
 	color: $primary-color;
 	font-size: 2.5em;
 	line-height: 1.25em;
-}
-
-.heading-text h2 {
-	margin-top: -5px;
-	margin-bottom: -5px;
 }
 
 
@@ -238,7 +236,7 @@ MEDIA QUERIES
 @media screen and (min-width: 800px) {
 	body {
 		section, .heading-container, .intro {
-		margin: 125px 0;
+		margin: 75px 0;
 		}
 		p {
 			font-size: 1.25em;
@@ -265,17 +263,24 @@ MEDIA QUERIES
 		}
 	}
 
-	.outline-main, .placeholder, .outline-second, .outline-third, .outline-fourth {
-		font-size: 5em;
-		margin: -35px 0;
+	.placeholder, .outline-second, .outline-third, .outline-fourth {
+		font-size: 5.75em;
+		margin: -30px 0;
+		stroke-width: 3;
+		font-weight: 800;
 	}
+
 
 	header div img {
 		width: 600px;
 	}
 	
 	.outline-main {
-		top: 250px;
+		font-size: 5.75em;
+		margin: -30px 0;
+		top: 280px;
+		stroke-width: 5;
+		font-weight: 800;
 	}
 
 	header nav {
