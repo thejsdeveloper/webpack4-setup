@@ -40,6 +40,8 @@ section {
 
 aside svg {
 	width: 25px;
+	fill: white; 
+	margin: 5px;
 }
 
 header {
@@ -66,7 +68,7 @@ header {
 .header-slant {
 	z-index: -999;
 	background-color: $primary-color;
-	height: 850px;
+	height: 875px;
 	width: 120%;
 	transform: rotate(7deg) translateX(20px);
 	position: absolute;
@@ -109,46 +111,15 @@ h1 {
 .outline-main {
 	overflow:visible;
 	position: absolute;
-	top: 40px;
-	left: -5px;
+	top: 80px;
 	z-index: 9999;
 	font-size: 2.6em;
 }
 
-.outline-second {
+.outline-second, .placeholder, .outline-third, .outline-fourth {
 	font-size: 2.5em;
-	line-height: 1.25em;
 	font-weight: bold;
-    color: $primary-color;
-    text-shadow:
-       -1px -1px 0 rgba(255, 255, 255, 0.75),  
-        1px -1px 0 rgba(255, 255, 255, 0.75),
-        -1px 1px 0 rgba(255, 255, 255, 0.75),
-         1px 1px 0 rgba(255, 255, 255, 0.75)
-}
-
-.outline-third {
-	font-size: 2.5em;
-	line-height: 1.25em;
-	font-weight: bold;
-    color: $primary-color;
-    text-shadow:
-		-1px -1px 0 rgba(255, 255, 255, 0.5),  
-		1px -1px 0 rgba(255, 255, 255, 0.5),
-		-1px 1px 0 rgba(255, 255, 255, 0.5),
-	 	1px 1px 0 rgba(255, 255, 255, 0.5)
-}
-
-.outline-fourth {
-	font-size: 2.5em;
-	line-height: 1.25em;
-	font-weight: bold;
-    color: $primary-color;
-    text-shadow:
-		-1px -1px 0 rgba(255, 255, 255, 0.25),  
-		1px -1px 0 rgba(255, 255, 255, 0.25),
-		-1px 1px 0 rgba(255, 255, 255, 0.25),
-	 	1px 1px 0 rgba(255, 255, 255, 0.25)
+	margin: -55px 0;
 }
 
 .heading-container {
@@ -171,11 +142,6 @@ h1 {
 	content: "";
 	clear: both;
 	display: table;
-  }
-
-svg {
-	  fill: white;
-	  margin: 5px;
   }
 
 .prize {
@@ -299,8 +265,9 @@ MEDIA QUERIES
 		}
 	}
 
-	.outline-main, .outline-second, .outline-third, .outline-fourth {
+	.outline-main, .placeholder, .outline-second, .outline-third, .outline-fourth {
 		font-size: 5em;
+		margin: -35px 0;
 	}
 
 	header div img {
@@ -308,7 +275,7 @@ MEDIA QUERIES
 	}
 	
 	.outline-main {
-		top: 205px;
+		top: 250px;
 	}
 
 	header nav {
