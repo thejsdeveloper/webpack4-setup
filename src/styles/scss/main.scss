@@ -7,6 +7,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
 	font-family: "Open Sans";
 	color: #404040;
 	font-weight: 300;
@@ -18,13 +19,24 @@ body {
 	}
 }
 
+section {
+	overflow-x: hidden;
+}
+
+aside svg {
+	width: 25px;
+}
 
 header {
 	background-color: #00c895;
+	width: 100%;
 	color: white;
 	user-select: none;
 	nav {
 		box-shadow: none;
+		.links {
+			display: none;
+		}
 	}
 	div img {
 		position: absolute;
@@ -117,7 +129,7 @@ h1 {
 	line-height: 1.25em;
 }
 
-.heading-text p {
+.heading-text h2 {
 	margin-top: -5px;
 	margin-bottom: -5px;
 }
@@ -134,29 +146,34 @@ svg {
 	  margin: 5px;
   }
 
-.prize-text {
-	font-size: 2em;
-	text-align: center;
-	span {
-		font-size: 7em;
-		font-weight: bold;
-		line-height: 1em;
-		color: #fff;
-		text-shadow:
-			-1px -1px 0 #000,  
-			1px -1px 0 #000,
-			-1px 1px 0 #000,
-			1px 1px 0 #000
+.prize {
+	display: flex;
+	flex-direction: column;
+	.prize-text {
+		font-size: 2em;
+		text-align: center;
+		span {
+			font-size: 7em;
+			font-weight: bold;
+			line-height: 1em;
+			color: #fff;
+			text-shadow:
+				-1px -1px 0 #000,  
+				1px -1px 0 #000,
+				-1px 1px 0 #000,
+				1px 1px 0 #000
+		}
 	}
 }
 
 .team-images {
-	display: grid;
-	grid-gap: 5px;
-	grid-auto-flow: row;
-	grid-template-columns: repeat(auto-fill, 150px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: space-between;
 	img {
 		width: 150px;
+		margin: 5px;
 		&:hover {
 		filter:  url(#monochrome);
 		}
@@ -189,7 +206,7 @@ DECORATIONS
 	width: 125px;
 	position: absolute;
 	top: 950px;
-	right: -40px;
+	right: 10px;
 }
 
 .circ2 {
@@ -213,5 +230,98 @@ DECORATIONS
 	width: 125px;
 	position: absolute;
 	top: 1000px;
-	right: -25px;
+	right: 20px;
+}
+
+/**********
+MEDIA QUERIES
+**********/
+
+@media screen and (min-width: 800px) {
+	body {
+		section, .heading-container, .intro {
+		margin: 75px 0;
+		}
+		p {
+			font-size: 1.25em;
+		}
+	}
+
+	aside {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 50px;
+		top: 45%;
+		svg {
+			width: 35px;
+		}
+	}
+
+	.outline-main, .outline-second, .outline-third, .outline-fourth {
+		font-size: 5em;
+	}
+
+	header div img {
+		width: 600px;
+	}
+	
+	.outline-main {
+		top: 199px;
+	}
+
+	header nav .links {
+		display: flex;
+		justify-content: space-between;
+		width: 30%;
+		float: right;
+	}
+
+	.prize {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 100px;
+	}
+
+	.airpods {
+		width: 500px;
+	}
+
+	.intro {
+		display: flex;
+		justify-content: space-between;
+		p {		
+		width: 45%;
+		}
+	}
+
+	.competition-text {
+		display: flex;
+		justify-content: space-between;
+	 div {
+		width: 45%;
+	}
+	}
+
+	section h1 {
+		font-size: 3em;
+	}
+	
+	.prize .prize-text span {
+		font-size: 9em;
+	}
+
+	.team-images img {
+		width: 250px;
+	}
+}
+
+@media screen and (min-width: 1400px) {	
+	header div img {
+		width: 800px;
+	}
+
+	.team-images img {
+		width: 300px;
+	}
 }
