@@ -37,6 +37,8 @@ header {
 	color: white;
 	user-select: none;
 	nav {
+		width: 95%;
+		margin: auto;
 		box-shadow: none;
 		.links {
 			display: none;
@@ -254,7 +256,7 @@ MEDIA QUERIES
 @media screen and (min-width: 800px) {
 	body {
 		section, .heading-container, .intro {
-		margin: 150px 0;
+		margin: 125px 0;
 		}
 		p {
 			font-size: 1.25em;
@@ -262,11 +264,11 @@ MEDIA QUERIES
 	}
 
 	.left-slant {
-		height: 1500px;
+		height: 1400px;
 	}
 
 	#examples, #competition, #team {
-		margin: 300px 0;
+		margin: 325px 0;
 	}
 
 	aside {
@@ -338,36 +340,53 @@ MEDIA QUERIES
 	}
 
 	.circ1 {
-		z-index: -999;
+		z-index: -99999;
 		width: 250px;
 		position: absolute;
-		top: 1200px;
+		top: 1500px;
 		right: 10px;
 	}
 	
 	.circ2 {
-		z-index: -999;
+		z-index: -99999;
 		width: 220px;
 		position: absolute;
-		top: 2000px;
+		top: 2300px;
 		left: -25px;
 	}
 	
 	.rect1 {
-		z-index: -999;
+		z-index: -99999;
 		width: 240px;
 		position: absolute;
-		top: 1800px;
+		top: 2100px;
 		left: -60px;
 	}
 	
 	.rect2 {
-		z-index: -999;
+		z-index: -99999;
 		width: 250px;
 		position: absolute;
-		top: 1400px;
+		top: 1700px;
 		right: 20px;
 	}
+
+	.tri1 {
+		z-index: -99999;
+		width: 325px;
+		position: absolute;
+		top: 2700px;
+		left: 1000px;
+	}
+	
+	.tri2 {
+		z-index: -99999;
+		width: 300px;
+		position: absolute;
+		top: 2800px;
+		left: 1200px;
+	}
+	
 }
 
 @media screen and (min-width: 1400px) {	
