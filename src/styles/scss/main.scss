@@ -19,6 +19,7 @@ body {
 	}
 	.content {
 		position: relative;
+		overflow-x: hidden;
 	}
 }
 
@@ -47,6 +48,16 @@ header {
 		z-index: 9999;
 		width: 250px;
 	}
+}
+
+.left-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 750px;
+	width: 120%;
+	transform: rotate(7deg) translateX(20px);
+	position: absolute;
+	top: 0;
 }
 
 section:nth-child(even) {
@@ -250,12 +261,20 @@ MEDIA QUERIES
 		}
 	}
 
+	.left-slant {
+		height: 1500px;
+	}
+
+	#examples, #competition, #team {
+		margin: 300px 0;
+	}
+
 	aside {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
 		left: 50px;
-		top: 45%;
+		top: 45vh;
 		svg {
 			width: 35px;
 		}
@@ -316,6 +335,38 @@ MEDIA QUERIES
 
 	.team-images img {
 		width: 250px;
+	}
+
+	.circ1 {
+		z-index: -999;
+		width: 250px;
+		position: absolute;
+		top: 1200px;
+		right: 10px;
+	}
+	
+	.circ2 {
+		z-index: -999;
+		width: 220px;
+		position: absolute;
+		top: 2000px;
+		left: -25px;
+	}
+	
+	.rect1 {
+		z-index: -999;
+		width: 240px;
+		position: absolute;
+		top: 1800px;
+		left: -60px;
+	}
+	
+	.rect2 {
+		z-index: -999;
+		width: 250px;
+		position: absolute;
+		top: 1400px;
+		right: 20px;
 	}
 }
 
