@@ -13,6 +13,7 @@ body {
 	font-weight: 300;
 	p {
 		line-height: 2em;
+		font-size: 1.1em;
 	}
 	section, .heading-container, .intro {
 		margin: 45px 0;
@@ -20,6 +21,16 @@ body {
 	.content {
 		position: relative;
 		overflow-x: hidden;
+	}
+}
+
+#examples, #competition, #team {
+	margin: 175px 0;
+}
+
+#examples {
+	h1, p {
+  color: white;
 	}
 }
 
@@ -37,7 +48,7 @@ header {
 	color: white;
 	user-select: none;
 	nav {
-		width: 95%;
+		width: 90%;
 		margin: auto;
 		box-shadow: none;
 		.links {
@@ -52,24 +63,35 @@ header {
 	}
 }
 
-.left-slant {
+.header-slant {
 	z-index: -999;
 	background-color: $primary-color;
-	height: 750px;
+	height: 850px;
 	width: 120%;
 	transform: rotate(7deg) translateX(20px);
 	position: absolute;
 	top: 0;
 }
 
+.footer-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 150px;
+	width: 120%;
+	transform: rotate(-5deg) translateX(-20px) translatey(-35px);
+	position: absolute;
+	bottom: 0;
+}
+
+
 section:nth-child(even) {
 	background-color: $primary-color;
 }
 
 footer {
+	overflow: hidden;
 	position: absolute;
 	bottom: 0;
-	left: 0;
 	width: 100%;
 }
 
@@ -202,7 +224,7 @@ DECORATIONS
 **********/
 
 .tri1 {
-	z-index: -999;
+	z-index: -9999;
 	width: 100px;
 	position: absolute;
 	top: 670px;
@@ -210,7 +232,7 @@ DECORATIONS
 }
 
 .tri2 {
-	z-index: -999;
+	z-index: -9999;
 	width: 125px;
 	position: absolute;
 	top: 725px;
@@ -218,7 +240,7 @@ DECORATIONS
 }
 
 .circ1 {
-	z-index: -999;
+	z-index: -9999;
 	width: 125px;
 	position: absolute;
 	top: 950px;
@@ -226,7 +248,7 @@ DECORATIONS
 }
 
 .circ2 {
-	z-index: -999;
+	z-index: -9999;
 	width: 110px;
 	position: absolute;
 	top: 1450px;
@@ -234,7 +256,7 @@ DECORATIONS
 }
 
 .rect1 {
-	z-index: -999;
+	z-index: -9999;
 	width: 120px;
 	position: absolute;
 	top: 1400px;
@@ -242,7 +264,7 @@ DECORATIONS
 }
 
 .rect2 {
-	z-index: -999;
+	z-index: -9999;
 	width: 125px;
 	position: absolute;
 	top: 1000px;
@@ -263,9 +285,10 @@ MEDIA QUERIES
 		}
 	}
 
-	.left-slant {
+	.header-slant {
 		height: 1400px;
 	}
+
 
 	#examples, #competition, #team {
 		margin: 325px 0;
@@ -294,11 +317,14 @@ MEDIA QUERIES
 		top: 199px;
 	}
 
-	header nav .links {
+	header nav {
+		width: 95%;
+		.links {
 		display: flex;
 		justify-content: space-between;
 		width: 30%;
 		float: right;
+		}
 	}
 
 	.prize {
