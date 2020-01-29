@@ -17,6 +17,9 @@ body {
 	section, .heading-container, .intro {
 		margin: 45px 0;
 	}
+	.content {
+		position: relative;
+	}
 }
 
 section {
@@ -51,7 +54,7 @@ section:nth-child(even) {
 }
 
 footer {
-	position: static;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -161,7 +164,7 @@ svg {
 				-1px -1px 0 #000,  
 				1px -1px 0 #000,
 				-1px 1px 0 #000,
-				1px 1px 0 #000
+				1px 1px 0 #000;
 		}
 	}
 }
@@ -240,7 +243,7 @@ MEDIA QUERIES
 @media screen and (min-width: 800px) {
 	body {
 		section, .heading-container, .intro {
-		margin: 75px 0;
+		margin: 150px 0;
 		}
 		p {
 			font-size: 1.25em;
