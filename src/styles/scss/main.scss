@@ -29,12 +29,13 @@ body {
 }
 
 #examples {
+	background-color: $primary-color;
 	.example-group {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		.example {
-			width: 45%;
+			width: 100%;
 		}
 	}
 	h1, h2, a, p {
@@ -77,30 +78,6 @@ header {
 	}
 }
 
-.header-slant {
-	z-index: -999;
-	background-color: $primary-color;
-	height: 875px;
-	width: 120%;
-	transform: rotate(7deg) translateX(20px);
-	position: absolute;
-	top: 0;
-}
-
-.footer-slant {
-	z-index: -999;
-	background-color: $primary-color;
-	height: 150px;
-	width: 120%;
-	transform: rotate(-5deg) translateX(-20px) translatey(-35px);
-	position: absolute;
-	bottom: 0;
-}
-
-
-section:nth-child(even) {
-	background-color: $primary-color;
-}
 
 footer {
 	overflow: hidden;
@@ -122,7 +99,7 @@ h1 {
 
 h2 {
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 1.5em;
 	color: rgba(0, 0, 0, 0.75);
 	a {
 		display: flex;
@@ -257,6 +234,50 @@ DECORATIONS
 }
 
 /**********
+SLANTS
+**********/
+
+.header-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 875px;
+	width: 120%;
+	transform: rotate(7deg) translateX(20px);
+	position: absolute;
+	top: 0;
+}
+
+.examples-top-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 300px;
+	width: 120%;
+	transform: rotate(7deg) translateX(-30px);
+	position: absolute;
+	top: 2600px;
+}
+
+.examples-bottom-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 300px;
+	width: 120%;
+	transform: rotate(-7deg) translateX(-30px);
+	position: absolute;
+	top: 2950px;
+}
+
+.footer-slant {
+	z-index: -999;
+	background-color: $primary-color;
+	height: 150px;
+	width: 120%;
+	transform: rotate(-5deg) translateX(-20px) translatey(-35px);
+	position: absolute;
+	bottom: 0;
+}
+
+/**********
 MEDIA QUERIES
 **********/
 
@@ -274,9 +295,28 @@ MEDIA QUERIES
 		height: 1400px;
 	}
 
+	.examples-top-slant {
+		top: 2900px;
+		height:500px;
+	}
+	
+	.examples-bottom-slant {
+		height: 500px;
+		top: 3200px;
+	}
+
 
 	#examples, #competition, #team {
 		margin: 325px 0;
+	}
+
+	#examples {
+		padding: 50px 0;
+		.example-group {
+			.example {
+				width: 45%;
+			}
+		}
 	}
 
 	aside {
@@ -416,4 +456,15 @@ MEDIA QUERIES
 	.team-images img {
 		width: 300px;
 	}
+
+	.examples-top-slant {
+		top: 2600px;
+		height: 500px;
+	}
+	
+	.examples-bottom-slant {
+		top: 2900px;
+		height: 500px;
+	}
+
 }
