@@ -20,7 +20,7 @@ body {
 	}
 	.content {
 		position: relative;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 }
 
@@ -80,10 +80,16 @@ header {
 
 
 footer {
-	overflow: hidden;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	height: 175px;
+	background-color: $primary-color;
+	color: white;
+	text-align: center;
+	p {
+		width: 100%;
+	}
 }
 
 main {
@@ -270,9 +276,9 @@ SLANTS
 .footer-slant {
 	z-index: -999;
 	background-color: $primary-color;
-	height: 150px;
+	height: 250px;
 	width: 120%;
-	transform: rotate(-5deg) translateX(-10%) translatey(-35px);
+	transform: rotate(-5deg) translateX(-10%) translatey(-10%);
 	position: absolute;
 	bottom: 0;
 }
@@ -307,11 +313,11 @@ MEDIA QUERIES
 
 
 	#examples, #competition, #team {
-		margin: 325px 0;
+		margin: 375px 0;
 	}
 
 	#examples {
-		padding: 50px 0;
+		padding: 25px 0;
 		.example-group {
 			.example {
 				width: 45%;
@@ -319,16 +325,6 @@ MEDIA QUERIES
 		}
 	}
 
-	aside {
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		left: 50px;
-		top: 45vh;
-		svg {
-			width: 35px;
-		}
-	}
 
 	.placeholder, .outline-second, .outline-third, .outline-fourth {
 		font-size: 5.75em;
@@ -448,7 +444,19 @@ MEDIA QUERIES
 	
 }
 
-@media screen and (min-width: 1500px) {	
+@media screen and (min-width: 1400px) {	
+	
+	aside {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 50px;
+		top: 45vh;
+		svg {
+			width: 35px;
+		}
+	}
+
 	header div img {
 		width: 800px;
 	}
