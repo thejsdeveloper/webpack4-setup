@@ -29,7 +29,15 @@ body {
 }
 
 #examples {
-	h1, p {
+	.example-group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.example {
+			width: 45%;
+		}
+	}
+	h1, h2, a, p {
 		color: white;
 	}
 }
@@ -62,9 +70,10 @@ header {
 		right: 0;
 		z-index: 9999;
 		width: 250px;
-		-webkit-filter: sepia(1);
-		filter: sepia(1);
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
 		border-radius: 4px;
+		box-shadow: 2px, 2px, #404040;
 	}
 }
 
@@ -107,7 +116,7 @@ main {
 h1 {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 328px;
+	font-size: 3em;
 	color: rgba(0, 0, 0, 0.75);
 }
 
@@ -186,6 +195,7 @@ h2 {
 	align-items: space-between;
 	img {
 		width: 150px;
+		border-radius: 4px;
 		margin: 5px;
 		&:hover {
 		filter:  url(#monochrome);
