@@ -241,8 +241,8 @@ SLANTS
 	z-index: -999;
 	background-color: $primary-color;
 	height: 875px;
-	width: 120%;
-	transform: rotate(7deg) translateX(20px);
+	width: 130%;
+	transform: rotate(7deg) translateX(-10%);
 	position: absolute;
 	top: 0;
 }
@@ -252,7 +252,7 @@ SLANTS
 	background-color: $primary-color;
 	height: 300px;
 	width: 120%;
-	transform: rotate(7deg) translateX(-30px);
+	transform: rotate(7deg) translateX(-10%);
 	position: absolute;
 	top: 2600px;
 }
@@ -262,9 +262,9 @@ SLANTS
 	background-color: $primary-color;
 	height: 300px;
 	width: 120%;
-	transform: rotate(-7deg) translateX(-30px);
+	transform: rotate(-7deg) translateX(-10%);
 	position: absolute;
-	top: 2950px;
+	top: 3400px;
 }
 
 .footer-slant {
@@ -272,7 +272,7 @@ SLANTS
 	background-color: $primary-color;
 	height: 150px;
 	width: 120%;
-	transform: rotate(-5deg) translateX(-20px) translatey(-35px);
+	transform: rotate(-5deg) translateX(-10%) translatey(-35px);
 	position: absolute;
 	bottom: 0;
 }
@@ -296,13 +296,13 @@ MEDIA QUERIES
 	}
 
 	.examples-top-slant {
-		top: 2900px;
+		top: 2800px;
 		height:500px;
 	}
 	
 	.examples-bottom-slant {
 		height: 500px;
-		top: 3200px;
+		top: 3400px;
 	}
 
 
@@ -448,7 +448,7 @@ MEDIA QUERIES
 	
 }
 
-@media screen and (min-width: 1400px) {	
+@media screen and (min-width: 1500px) {	
 	header div img {
 		width: 800px;
 	}
@@ -458,12 +458,12 @@ MEDIA QUERIES
 	}
 
 	.examples-top-slant {
-		top: 2600px;
+		top: 2700px;
 		height: 500px;
 	}
 	
 	.examples-bottom-slant {
-		top: 2900px;
+		top: 3200px;
 		height: 500px;
 	}
 
