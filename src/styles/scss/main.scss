@@ -196,7 +196,7 @@ DECORATIONS
 	width: 110px;
 	position: absolute;
 	top: 2350px;
-	left: 550px;
+	left: 350px;
 }
 
 .tri2 {
@@ -204,7 +204,23 @@ DECORATIONS
 	width: 125px;
 	position: absolute;
 	top: 2300px;
-	left: 500px;
+	left: 300px;
+}
+
+.tri3 {
+	z-index: -9999;
+	width: 110px;
+	position: absolute;
+	top: 4350px;
+	left: 350px;
+}
+
+.tri4 {
+	z-index: -9999;
+	width: 125px;
+	position: absolute;
+	top: 4300px;
+	left: 300px;
 }
 
 .circ1 {
@@ -223,6 +239,22 @@ DECORATIONS
 	left: -25px;
 }
 
+.circ3 {
+	z-index: -9999;
+	width: 125px;
+	position: absolute;
+	top: 3950px;
+	right: 0px;
+}
+
+.circ4 {
+	z-index: -9999;
+	width: 110px;
+	position: absolute;
+	top: 4550px;
+	left: -25px;
+}
+
 .rect1 {
 	z-index: -9999;
 	width: 120px;
@@ -236,6 +268,22 @@ DECORATIONS
 	width: 125px;
 	position: absolute;
 	top: 1040px;
+	right: 20px;
+}
+
+.rect3 {
+	z-index: -9999;
+	width: 120px;
+	position: absolute;
+	top: 4460px;
+	left: -60px;
+}
+
+.rect4 {
+	z-index: -9999;
+	width: 125px;
+	position: absolute;
+	top: 4040px;
 	right: 20px;
 }
 
@@ -395,51 +443,72 @@ MEDIA QUERIES
 	}
 
 	.circ1 {
-		z-index: -99999;
 		width: 250px;
-		position: absolute;
 		top: 1500px;
 		right: 10px;
 	}
 	
 	.circ2 {
-		z-index: -99999;
 		width: 220px;
-		position: absolute;
 		top: 2300px;
+		left: -25px;
+	}
+
+	.circ3 {
+		width: 250px;
+		top: 4000px;
+		right: 10px;
+	}
+	
+	.circ4 {
+		width: 220px;
+		top: 4400px;
 		left: -25px;
 	}
 	
 	.rect1 {
-		z-index: -99999;
 		width: 240px;
-		position: absolute;
 		top: 2100px;
 		left: -60px;
 	}
 	
 	.rect2 {
-		z-index: -99999;
 		width: 250px;
-		position: absolute;
 		top: 1700px;
 		right: 20px;
 	}
 
+	.rect3 {
+		width: 240px;
+		top: 4200px;
+	}
+	
+	.rect4 {
+		width: 250px;
+		top: 3800px;
+	}
+
 	.tri1 {
-		z-index: -99999;
 		width: 325px;
-		position: absolute;
 		top: 2700px;
 		left: 1000px;
 	}
 	
 	.tri2 {
-		z-index: -99999;
 		width: 300px;
-		position: absolute;
 		top: 2800px;
 		left: 1200px;
+	}
+
+	.tri3 {
+		width: 325px;
+		top: 5500px;
+	}
+	
+	.tri4 {
+		width: 300px;
+		top: 5400px;
+
 	}
 	
 }
