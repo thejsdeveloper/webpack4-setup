@@ -47,10 +47,9 @@ section {
 	overflow-x: hidden;
 }
 
-aside svg {
+aside img {
 	width: 25px;
-	fill: white; 
-	margin: 5px;
+	margin: 7px;
 }
 
 header {
@@ -521,7 +520,7 @@ MEDIA QUERIES
 		position: absolute;
 		left: 50px;
 		top: 45vh;
-		svg {
+		img {
 			width: 35px;
 		}
 	}
