@@ -59,6 +59,8 @@ header {
 	color: white;
 	user-select: none;
 	nav {
+		background-color:#00c895;
+		z-index: 9999;
 		width: 90%;
 		margin: auto;
 		box-shadow: none;
@@ -69,7 +71,7 @@ header {
 	div img {
 		position: absolute;
 		right: 0;
-		z-index: 9999;
+		z-index: 9998;
 		width: 250px;
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
@@ -121,7 +123,7 @@ h2 {
 	overflow:visible;
 	position: absolute;
 	top: 80px;
-	z-index: 9999;
+	z-index: 9998;
 	font-size: 2.6em;
 	stroke-width: 3;
 	font-weight: 800;
@@ -364,6 +366,10 @@ MEDIA QUERIES
 		margin: 375px 0;
 	}
 
+	#competition, #team{
+		padding-top: 50px;
+	}
+
 	#examples {
 		padding: 25px 0;
 		.example-group {
@@ -395,8 +401,13 @@ MEDIA QUERIES
 	}
 
 	header nav {
-		width: 95%;
+		width: 100%;
+		position: fixed;
+		.navbar-brand{
+			margin: 0rem 2rem;
+		}
 		.links {
+		margin: 0rem 2rem;
 		display: flex;
 		justify-content: space-between;
 		width: 30%;
