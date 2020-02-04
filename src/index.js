@@ -12,3 +12,7 @@ console.log(`***footer******`);
 let footer = new Footer();
 let footerText = footer.getFooterText();
 console.log(footerText);
+
+const scroll = new SmoothScroll('.navbar a[href*="#"]', {
+	speed: 700
+});
