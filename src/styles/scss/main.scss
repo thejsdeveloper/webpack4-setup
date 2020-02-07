@@ -27,6 +27,10 @@ body {
 		position: relative;
 		overflow: hidden;
 	}
+	a {
+		color: $accent-color;
+		font-weight: bold;
+	}
 }
 
 #examples, #competition, #team {
