@@ -199,12 +199,18 @@ h2 {
 	        align-items: space-between;
 	img {
 		width: 150px;
-		border-radius: 4px;
+		border-radius: 200px;
 		margin: 5px;
 		&:hover {
 		-webkit-filter:  url(#monochrome);
 		        filter:  url(#monochrome);
 		}
+	}
+	p {
+		font-size: .75em;
+		text-align: center;
+		margin-top: -5px;
+		font-weight: 500;
 	}
 } 
 
@@ -420,8 +426,8 @@ MEDIA QUERIES
 	}
 
 	.animated{
-		-webkit-animation-duration: 2s;
-		        animation-duration: 2s;
+		-webkit-animation-duration: 1.5s;
+		        animation-duration: 1.5s;
 	}
 
 
@@ -602,9 +608,14 @@ MEDIA QUERIES
 		width: 800px;
 	}
 
-	.team-images img {
+	.team-images {
+	 img {
 		width: 300px;
 	}
+	p {
+			font-size: 1.2em;
+	}
+}
 
 	.examples-top-slant {
 		top: 2850px;
