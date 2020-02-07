@@ -10,7 +10,7 @@ var s3 = new AWS.S3({apiVersion: '2006-03-01'});
 var basePath = '';
 var files = [];
 //TODO: change argv.bucket to the bucket name
-console.log(`deploying console to marketing-dev-console.mymaas.net`)
+console.log(`deploying console to uottahack.solace.cloud`)
 process.stdout.write('uploading files...');
 
 basePath = process.cwd() + '/dist/';
@@ -41,7 +41,7 @@ function uploadSomeFiles() {
 
     let file = files.pop();
     const params = {
-      Bucket: "marketing-dev-console.mymaas.net",
+      Bucket: "uottahack.solace.cloud",
       Key: file.replace(basePath, ''),
       Body: fs.readFileSync(file),
       ContentType: getContentType(file)

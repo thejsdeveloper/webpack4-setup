@@ -131,6 +131,9 @@ h2 {
 		    -ms-flex-align: center;
 		        align-items: center;
 		color: rgba(0, 0, 0, 0.75);
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	img {
 		margin-right: 10px;
