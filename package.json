@@ -13,7 +13,8 @@
   "author": "Vikas yadav",
   "license": "MIT",
   "dependencies": {
-    "materialize-css": "^1.0.0"
+    "materialize-css": "^1.0.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
