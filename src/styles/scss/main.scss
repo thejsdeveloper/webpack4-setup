@@ -185,7 +185,8 @@ h2 {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
-	        flex-direction: column;
+			flex-direction: column;
+	margin: 0 auto;
 	.prize-text {
 		font-size: 2em;
 		text-align: center;
@@ -626,12 +627,12 @@ MEDIA QUERIES
 }
 
 	.examples-top-slant {
-		top: 2850px;
+		top: 2950px;
 		height: 500px;
 	}
 	
 	.examples-bottom-slant {
-		top: 3300px;
+		top: 3500px;
 		height: 500px;
 	}
 
