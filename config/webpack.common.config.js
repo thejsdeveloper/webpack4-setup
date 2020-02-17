@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin   = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index',
@@ -28,13 +28,13 @@ module.exports = {
             },
             {
                 test: [/.css$|.scss$/],
-                use:[
+                use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                     'postcss-loader'
                 ]
-            }, 
+            },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 use: [
@@ -77,11 +77,9 @@ module.exports = {
             filename: 'style.[chunkhash].css'
         }),
         new CopyWebpackPlugin([{
-            from:'./src/assets/images',
-            to:'assets/images'
+            from: './src/assets/images',
+            to: 'assets/images'
         }]),
-        new CleanWebpackPlugin(['dist'], {
-            root: path.join(__dirname, '..')
-          })
+        new CleanWebpackPlugin()
     ]
 }
