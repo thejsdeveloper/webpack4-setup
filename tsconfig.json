@@ -18,7 +18,7 @@
       "paths": {
         "@components": [ "src/components" ],
         "@scss": [ "src/styles/scss" ],
-        "@img": [ "src/assests/images" ],
+        "@img": [ "src/assets/images" ],
         "@": [ "src" ],
       }
     },
