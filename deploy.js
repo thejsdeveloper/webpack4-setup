@@ -4,9 +4,12 @@ var fs = require('fs');
 var path = require('path');;
 
 var AWS = require('aws-sdk');
+var credentials = new AWS.SharedIniFileCredentials({profile: 'uottahack'});
+console.log(credentials);
+//AWS.config.credentials = credentials;
 AWS.config.update({region: 'us-east-1'});
 var s3 = new AWS.S3({apiVersion: '2006-03-01'});
-
+console.log(s3);
 var basePath = '';
 var files = [];
 //TODO: change argv.bucket to the bucket name
@@ -41,7 +44,7 @@ function uploadSomeFiles() {
 
     let file = files.pop();
     const params = {
-      Bucket: "uottahack.solace.cloud",
+      Bucket: "uottahack",
       Key: file.replace(basePath, ''),
       Body: fs.readFileSync(file),
       ContentType: getContentType(file)
@@ -50,7 +53,6 @@ function uploadSomeFiles() {
     if(path.basename(file) === 'index.html') {
       params.CacheControl = 'no-store';
     }
-
     promises.push(s3.upload(params).promise());
   }
 

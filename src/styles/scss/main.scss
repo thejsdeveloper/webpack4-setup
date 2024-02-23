@@ -1,18 +1,10 @@
 @import '../../../node_modules/materialize-css/sass/components/_color-variables.scss';
 $primary-color: #00c895;
 $accent-color:  #F37021;
+$dark-blue: #20262b;
 @import '../../../node_modules/materialize-css/sass/materialize.scss';
 
 body {
-	min-height: 100vh;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	overflow-x: hidden;
 	font-family: "Open Sans";
 	color: #404040;
 	font-weight: 300;
@@ -20,8 +12,8 @@ body {
 		line-height: 2em;
 		font-size: 1.1em;
 	}
-	section, .heading-container, .intro {
-		margin: 45px 0;
+	.heading-container {
+		margin: 64px 0;
 	}
 	.content {
 		position: relative;
@@ -33,12 +25,50 @@ body {
 	}
 }
 
-#examples, #competition, #team {
-	margin: 175px 0;
+header {
+	background-color: $primary-color;
+	color: rgba(255, 255, 255, 0.9);
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	nav {
+		z-index: 9999;
+		width: 90%;
+		margin: auto;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+		.links {
+			display: none;
+		}
+	}
+	#team-photo {
+		position: absolute;
+		width: 50vw;
+		max-width: 700px;
+		min-width: 250px;
+		right: 0;
+		z-index: 9998;
+		border-radius: 4px;
+		-webkit-box-shadow: 2px, 2px, #404040;
+		        box-shadow: 2px, 2px, #404040;
+	}
+	aside {
+		display: flex;
+		flex-direction: row-reverse;
+		img {
+			width: 35px;
+		}
+	}
+	@media screen and (min-width: 1000px) {
+	}
+}
+
+section {
+	margin-bottom: 130px;
 }
 
 #examples {
-	background-color: $primary-color;
 	.example-group {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -52,50 +82,41 @@ body {
 			width: 100%;
 		}
 	}
-	h1, h2, a, p {
+	h1, p {
 		color: white;
+	}
+	h2 a {
+		color: $primary-color;
+	}
+}
+
+button {
+	padding: 10px 30px;
+	border-radius: 4px;
+	background: $dark-blue;
+	color: rgba(255, 255, 255, 0.9);
+	border: none;
+	cursor: pointer;
+	&:focus {
+		background: $dark-blue;
+	}
+	&:active {
+		background: lighten($dark-blue, 20%);
+	}
+	a {
+		color: rgba(255, 255, 255, 0.9);
 	}
 }
 
 section {
-	overflow-x: hidden;
+	overflow: visible;
+	position: relative;
 }
 
 aside img {
 	width: 25px;
 	margin: 7px;
 }
-
-header {
-	background-color: #00c895;
-	width: 100%;
-	color: white;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	nav {
-		background-color:#00c895;
-		z-index: 9999;
-		width: 90%;
-		margin: auto;
-		-webkit-box-shadow: none;
-		        box-shadow: none;
-		.links {
-			display: none;
-		}
-	}
-	div img {
-		position: absolute;
-		right: 0;
-		z-index: 9998;
-		width: 250px;
-		border-radius: 4px;
-		-webkit-box-shadow: 2px, 2px, #404040;
-		        box-shadow: 2px, 2px, #404040;
-	}
-}
-
 
 footer {
 	position: absolute;
@@ -118,9 +139,50 @@ main {
 
 h1 {
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 3em;
+	font-family: times;
 	color: rgba(0, 0, 0, 0.75);
+}
+
+.green-background {
+	h1 {
+		color: rgba(255, 255, 255, 0.9);
+	}
+	color: rgba(255, 255, 255, 0.9);
+	background: $primary-color;
+}
+
+.blue-background {
+	h1 {
+		color: rgba(255, 255, 255, 0.9);
+	}
+	color: rgba(255, 255, 255, 0.9);
+	background: $dark-blue;
+}
+
+#amazon {
+	width: 200px;
+}
+
+#competition {
+	.cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		> div {
+			flex: 1;
+		}
+	}
+	@media only screen and (max-width: 700px) {
+		.cards {
+			flex-direction: column;
+			align-items: center;
+			> div:first-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 h2 {
@@ -141,6 +203,21 @@ h2 {
 	}
 	img {
 		margin-right: 10px;
+	}
+}
+
+#diversity {
+	#people {
+		width: 100%;
+		height: auto;
+		max-width: 500px;
+		max-height: 500px;
+		border-radius: 50%;
+	}
+
+	strong {
+		font-size: 24px;
+		color: $dark-blue;
 	}
 }
 
@@ -222,6 +299,17 @@ h2 {
 	}
 } 
 
+.avatars {
+	display: flex;
+	flex-direction: row-reverse;
+	img {
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+	}
+}
+
 
 /**********
 DECORATIONS
@@ -271,8 +359,8 @@ DECORATIONS
 	z-index: -9999;
 	width: 110px;
 	position: absolute;
-	top: 1550px;
-	left: -25px;
+	top: 1700px;
+	right: 20px;
 }
 
 .circ3 {
@@ -327,16 +415,17 @@ DECORATIONS
 SLANTS
 **********/
 
-.header-slant {
+.bottom-slant {
 	z-index: -999;
 	background-color: $primary-color;
-	height: 975px;
-	width: 130%;
-	-webkit-transform: rotate(7deg) translateX(-10%) translateY(-25px);
-	    -ms-transform: rotate(7deg) translateX(-10%) translateY(-25px);
-	        transform: rotate(7deg) translateX(-10%) translateY(-25px);
+	height: 300px;
+	width: 150%;
+	-webkit-transform: rotate(4deg) translateX(-10%);
+	    -ms-transform: rotate(4deg) translateX(-10%);
+	        transform: rotate(4deg) translateX(-10%);
 	position: absolute;
-	top: 0;
+	bottom: -100px;
+	left: 0;
 }
 
 .examples-top-slant {
@@ -344,11 +433,17 @@ SLANTS
 	background-color: $primary-color;
 	height: 300px;
 	width: 120%;
-	-webkit-transform: rotate(7deg) translateX(-10%);
-	    -ms-transform: rotate(7deg) translateX(-10%);
-	        transform: rotate(7deg) translateX(-10%);
+	-webkit-transform: rotate(4deg) translateX(-10%);
+	    -ms-transform: rotate(4deg) translateX(-10%);
+	        transform: rotate(4deg) translateX(-10%);
 	position: absolute;
-	top: 2600px;
+	top: -50px;
+}
+
+.blue-background {
+	.examples-top-slant {
+		background-color: $dark-blue;
+	}
 }
 
 .examples-bottom-slant {
@@ -379,14 +474,8 @@ SLANTS
 MEDIA QUERIES
 **********/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
 	body {
-		section, .intro {
-		margin: 75px 0;
-		}
-		.heading-container {
-			margin: 125px 0;
-		}
 		p {
 			font-size: 1.25em;
 		}
@@ -397,24 +486,11 @@ MEDIA QUERIES
 		top: -50px;
 	}
 
-	.examples-top-slant {
-		top: 2800px;
-		height:500px;
-	}
-	
 	.examples-bottom-slant {
 		height: 500px;
 		top: 3400px;
 	}
 
-
-	#examples, #competition, #team {
-		margin: 375px 0;
-	}
-
-	#competition, #team{
-		padding-top: 50px;
-	}
 
 	#examples {
 		padding: 25px 0;
@@ -439,10 +515,6 @@ MEDIA QUERIES
 	}
 
 
-	header div img {
-		width: 600px;
-	}
-	
 	.outline-main {
 		font-size: 5.75em;
 		margin: -30px 0;
@@ -451,25 +523,32 @@ MEDIA QUERIES
 		font-weight: 800;
 	}
 
-	header 
-	nav {
-		width: 100%;
-		position: absolute;
-		top: 0;
-		z-index: 99999999;
-		.navbar-brand{
+	header {
+		nav {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 99999999;
+			.navbar-brand{
+				margin: 0rem 2rem;
+			}
+			.links {
 			margin: 0rem 2rem;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+					justify-content: space-between;
+			width: 30%;
+			float: right;
+			}
 		}
-		.links {
-		margin: 0rem 2rem;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
-		width: 30%;
-		float: right;
+		aside {
+			flex-direction: column;
+			position: absolute;
+			left: 50px;
+			top: 45vh;
 		}
 	}
 
@@ -480,11 +559,6 @@ MEDIA QUERIES
 		        flex-direction: row;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
-		margin-top: 100px;
-	}
-
-	.airpods {
-		width: 500px;
 	}
 
 	.intro {
@@ -596,41 +670,16 @@ MEDIA QUERIES
 
 @media screen and (min-width: 1400px) {	
 	
-	aside {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-		position: absolute;
-		left: 50px;
-		top: 45vh;
-		img {
-			width: 35px;
-		}
-	}
-
-	header div img {
-		width: 800px;
-	}
 
 	.team-images {
 	 img {
 		width: 300px;
-		margin: 0 30px;
 	}
 	p {
-			font-size: 1.2em;
+		font-size: 1.2em;
 	}
 }
 
-	.examples-top-slant {
-		top: 2950px;
-		height: 500px;
-	}
-	
 	.examples-bottom-slant {
 		top: 3500px;
 		height: 500px;
