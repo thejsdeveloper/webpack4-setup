@@ -1,35 +1,33 @@
 // installs console in s3 bucket
 
-var fs = require('fs');
-var path = require('path');;
+var fs = require("fs");
+var path = require("path");
 
-var AWS = require('aws-sdk');
-var credentials = new AWS.SharedIniFileCredentials({profile: 'uottahack'});
-console.log(credentials);
-//AWS.config.credentials = credentials;
-AWS.config.update({region: 'us-east-1'});
-var s3 = new AWS.S3({apiVersion: '2006-03-01'});
-console.log(s3);
-var basePath = '';
+var AWS = require("aws-sdk");
+var credentials = new AWS.SharedIniFileCredentials({ profile: "uottahack" });
+console.log("Credentials details:\n", credentials, "\n");
+AWS.config.credentials = credentials;
+AWS.config.update({ region: "us-east-1" });
+var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+console.log("S3 details:\n", s3, "\n");
+var basePath = "";
 var files = [];
 //TODO: change argv.bucket to the bucket name
-console.log(`deploying console to uottahack.solace.cloud`)
-process.stdout.write('uploading files...');
+console.log(`deploying console to uottahack.solace.cloud`);
+process.stdout.write("uploading files...");
 
-basePath = process.cwd() + '/dist/';
+basePath = process.cwd() + "/dist/";
 files = getAllFiles(basePath);
 
-uploadSomeFiles()
-.catch(error => {
-    console.log("error:", error);
-    console.log("\nstack:", error.stack);
-    process.exit(1);
+uploadSomeFiles().catch((error) => {
+  console.log("error:", error);
+  console.log("\nstack:", error.stack);
+  process.exit(1);
 });
-
 
 // chunk the upload (a bit) to avoid chaos
 function uploadSomeFiles() {
-  if(files.length == 0) {
+  if (files.length == 0) {
     console.log("complete");
     return Promise.resolve();
   }
@@ -37,21 +35,21 @@ function uploadSomeFiles() {
   process.stdout.write(".");
 
   let promises = [];
-  for(let x = 0; x < 200; x++) {
-    if(files.length == 0) {
+  for (let x = 0; x < 200; x++) {
+    if (files.length == 0) {
       break; // we've run out
     }
 
     let file = files.pop();
     const params = {
       Bucket: "uottahack",
-      Key: file.replace(basePath, ''),
+      Key: file.replace(basePath, ""),
       Body: fs.readFileSync(file),
-      ContentType: getContentType(file)
+      ContentType: getContentType(file),
     };
 
-    if(path.basename(file) === 'index.html') {
-      params.CacheControl = 'no-store';
+    if (path.basename(file) === "index.html") {
+      params.CacheControl = "no-store";
     }
     promises.push(s3.upload(params).promise());
   }
@@ -60,25 +58,34 @@ function uploadSomeFiles() {
 }
 
 function getContentType(filename) {
-  let extension = filename.substring(filename.lastIndexOf('.') + 1);
-  switch(extension) {
-      case "map": return "map";
-      case "svg": return "image/svg+xml";
-      case "png": return "image/png";
-      case "jpg": return "image/jpg";
-      case "gif": return "image/gif";
-      case "html": return "text/html";
-      case "js": return "application/javascript";
-      case "css": return "text/css";
-      default: return "application/octet-stream";
+  let extension = filename.substring(filename.lastIndexOf(".") + 1);
+  switch (extension) {
+    case "map":
+      return "map";
+    case "svg":
+      return "image/svg+xml";
+    case "png":
+      return "image/png";
+    case "jpg":
+      return "image/jpg";
+    case "gif":
+      return "image/gif";
+    case "html":
+      return "text/html";
+    case "js":
+      return "application/javascript";
+    case "css":
+      return "text/css";
+    default:
+      return "application/octet-stream";
   }
 }
 
 function getAllFiles(dir, filelist) {
   filelist = filelist || [];
-    
+
   let files = fs.readdirSync(dir);
-  files.forEach(function(file) {
+  files.forEach(function (file) {
     if (fs.statSync(path.join(dir, file)).isDirectory()) {
       filelist = getAllFiles(path.join(dir, file), filelist);
     } else {
