@@ -694,9 +694,11 @@ MEDIA QUERIES
   }
   
   .desktop-image {
-	width: 100%;
+	width: 70vw;
 	height: auto;
 	display: block; 
+	margin: 0 auto;
+
   }
   
   .mobile-image {
@@ -712,5 +714,43 @@ MEDIA QUERIES
 	.mobile-image {
 	  display: block;
 	}
+  }
+  
+  .footer-text {
+	text-align: center;
+	padding: 50px; 
+  }
+  
+  .footer-text p {
+	margin: 0;
+	padding: 100px;
+  }
+  
+  .footer-text strong {
+	color: #fff; 
+	font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+	.footer-text strong {
+	  font-size: 0.9rem;
+	  margin-top: -40%;
+	}
+	
+	.footer-text {
+	  padding: 15px 15px 5px;
+	}
+
+	.footer-text p {
+		margin-bottom: -10px;
+	  }
+
+  }
+  .center-align {
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	flex-direction: column; 
+	padding: 20px; 
   }
   
