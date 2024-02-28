@@ -686,3 +686,31 @@ MEDIA QUERIES
 	}
 
 }
+
+.image-container {
+	position: relative;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .desktop-image {
+	width: 100%;
+	height: auto;
+	display: block; 
+  }
+  
+  .mobile-image {
+	display: none; 
+	width: 100%;
+	height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.desktop-image {
+	  display: none;
+	}
+	.mobile-image {
+	  display: block;
+	}
+  }
+  
